@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 600px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 85%; background-color: #4CAF50;}
+.css {width: 90%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.php {width: 60%; background-color: #808080;}
+
+.skill-img{
+	top: 0;
+	height: 20vh;
+	width: 1200px;
+	background-image: url("head1.jpeg");
+	background-repeat: no-repeat;
+	 background-size: cover;
+}
+
+
+.body1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  background: #000;
+}
+.wavy {
+  position: relative;
+  -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+.wavy span {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-size: 2em;
+  text-transform: uppercase;
+  animation: animate 1.5s ease-in-out infinite;
+  animation-delay: calc(.1s * var(--i))
+}
+@keyframes animate {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="skill-img">
+	<br><br>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+  	<div class="body1 wavy">
+  <span style="--i:1;">S</span>
+  <span style="--i:2;">K</span>
+  <span style="--i:3;">I</span>
+  <span style="--i:4;">L</span>
+  <span style="--i:5;">L</span>
+  <span style="--i:6;">.</span>
+  <span style="--i:7;">R</span>
+  <span style="--i:8;">A</span>
+  <span style="--i:9;">T</span>
+  <span style="--i:10;">E</span>
+</div>
+    <br><br>
+
+<b>C++</b>
+<div class="container">
+  <div class="skills html">85%</div>
+</div>
+
+<br>
+
+<b>JAVA</b>
+<div class="container">
+  <div class="skills css">90%</div>
+</div>
+
+<br>
+
+<b>PYTHON</b>
+<div class="container">
+  <div class="skills js">85%</div>
+</div>
+
+<br>
+
+<b>WEB-DEVELOPMENT</b>
+<div class="container">
+  <div class="skills php">90%</div>
+</div>
+
+<br>
+
+<b>AngulerJS</b>
+<div class="container">
+  <div class="skills js">85%</div>
+</div>
+
+<br>
+
+<b>Flask</b>
+<div class="container">
+  <div class="skills php">90%</div>
+</div>
+
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
+  </div>
+</div>
+
+</body>
+</html>

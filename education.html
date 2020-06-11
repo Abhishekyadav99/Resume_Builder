@@ -1,55 +1,131 @@
-<!doctype html>
-<html lang = "en">
-   <head>
-      <meta charset = "utf-8">
-      <title>jQuery UI Dialog functionality</title>
-      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-         rel = "stylesheet">
-      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-      
-      <!-- CSS -->
-      <style>
-         .ui-widget-header,.ui-state-default, ui-button {
-            background:#b9cd6d;
-            border: 1px solid #b9cd6d;
-            color: #FFFFFF;
-            font-weight: bold;
-         }
-         .vl {
-            border-left: 6px solid green;
-            height: 500px;
-            position: absolute;
-           left: 50%;
-           margin-left: -3px;
-           top: 100px;
-         }
-      </style>
-      
-      <!-- Javascript -->
-      <script>
-         $(function() {
-            $( "#dialog-1" ).dialog({
-               autoOpen: false,  
-            });
-            $( "#opener" ).click(function() {
-               $( "#dialog-1" ).dialog( "open" );
-            });
-         });
-      </script>
+ <style>
+        /* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 0px ;
+  width: 90%;
+  border-left: none;
+  height: 500px;
+  display: none;
+}
 
-<style>
+  .back{
+  background-repeat: no-repeat;
 
-</style>
-   </head>
+  }
+  
+  .msg {
+  /*top: 0px;*/
+  left:20px;
+    right: 400px;
+  position: relative;
+  background-color: #228B22;         /*#FFC*/
+  padding: 2rem;
+  text-align: left;
+  max-width: 400px;
+  border-radius: 5px;
+  /*background-image: url("message-horor1.jpg");*/
+
+}
+
+.msg::before {
+  content: "";
+
+  position : absolute;
+  z-index  : -1;
+  bottom   : 15px;
+  right    : 5px;
+  width    : 50%;
+  top      : 80%;
+  max-width: 200px;
+
+  box-shadow: 0px 13px 10px black;
+  transform: rotate(4deg);
+}
+
+.txt{
+  font-size: 28px;
+  font-family:  Arial, Helvetica, sans-serif;
+  color:pink;
+}
+  
+  
+  
+  
+
+
+
+  
+.msgr {
+  left:450px;
+    right: 180px;
+  position: relative;
+  background-color: #2E8B57;
+  padding: 2rem;
+  text-align: left;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+.msgr::before {
+  content: "";
+
+  position : absolute;
+  z-index  : -1;
+  bottom   : 15px;
+  right    : 5px;
+  width    : 50%;
+  top      : 80%;
+  max-width: 200px;
+
+  box-shadow: 0px 13px 10px black;
+  transform: rotate(4deg);
+}
+
+.txt1{
+  font-size: 28px;
+  font-family:  Arial, Helvetica, sans-serif;
+  color:red;
+  
+
+
+ </style> 
+
+
+
+
+
+
+  				<!--Education-->
+  
+  <div class="tabcontent" id="education">
+    <h2 class="hd2"><i class='fas fa-book-reader' style='font-size:30px'></i>EDUCATION</h2>
+    
+    <div class="back">
+<br>
+	<div class="msg">
+  		<b><i class='fas fa-user-graduate' style='font-size:20px'></i>&nbsp; &nbsp;&nbsp; Bachelor of Technology</b>
+      <br>
+      	<b><i class='fas fa-laptop-code' style='font-size:20px'></i>&nbsp;&nbsp; Information Technology</b>
+      <br>
+      	<b><i class='fas fa-school' style='font-size:24px'></i>&nbsp; GRAPHIC ERA HILL UNIVERSITY</b>
+      <br><br>
+      	&nbsp; &nbsp; <b><i class="fa fa-calendar" style="font-size:24px"></i>&nbsp; 2016-2020</b>&nbsp; &nbsp; 
+      	<b><i class='fas fa-map-marker-alt' style='font-size:24px'></i>&nbsp; Dehradun</b>
+	</div>
+    </div>
+    
+    
+    <div class="msgr">
+  		<b><i class='fas fa-user-graduate' style='font-size:20px'></i>&nbsp; &nbsp;&nbsp; Bachelor of Technology</b>
+      <br>
+      	<b><i class='fas fa-laptop-code' style='font-size:20px'></i>&nbsp;&nbsp; Information Technology</b>
+      <br>
+      	<b><i class='fas fa-school' style='font-size:24px'></i>&nbsp; GRAPHIC ERA HILL UNIVERSITY</b>
+      <br><br>
+      	&nbsp; &nbsp; <b><i class="fa fa-calendar" style="font-size:24px"></i>&nbsp; 2016-2020</b>&nbsp; &nbsp; 
+      	<b><i class='fas fa-map-marker-alt' style='font-size:24px'></i>&nbsp; Dehradun</b>
+	</div>
+    </div>
    
-   <body>
-      <dialog open>This is an open dialog window</dialog>
-      <div class="vl"></div>
-
-      <!-- HTML --> 
-      <div id = "dialog-1" 
-         title = "Dialog Title goes here...">This my first jQuery UI Dialog!</div>
-      <button id = "opener">Open Dialog</button>
-   </body>
-</html>
